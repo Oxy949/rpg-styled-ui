@@ -19,6 +19,10 @@
     --attribute-dot-filled-color: #ff0000;
 }
 
+html {
+    --topleft: -10rem !important;
+  }
+
 #pause img[src*="systems/dnd5e/ui/official/ampersand.svg"] {
     box-sizing: border-box;
     width: 128px;
@@ -123,6 +127,26 @@ body.compact-mode #logo {
 
 #sidebar section {
  margin-bottom: 20px;
+}
+
+#sidebar section .tooltip-part {
+    margin-bottom: 0;
+}
+
+#sidebar section .dice-tray {
+    margin-bottom: 0;
+}
+
+#sidebar section .dice-tray button {
+    color: var(--main-text-light-color) !important; /*92887f*/
+}
+
+.dice-tray input[type=text] {
+    color: var(--main-text-light-color) !important; /*92887f*/
+}
+
+.dice-tray button div.dice {
+    background-color: var(--main-text-light-color) !important; /*92887f*/
 }
 
 #sidebar::after {
@@ -708,10 +732,6 @@ button#roll-hd:hover::before {
 
 /* NAVIGATION */
 
-#ui-top {
-    width: calc(100% - 340px);
-}
-
 #navigation #nav-toggle {
     background: none;
     border: none;
@@ -1185,6 +1205,10 @@ button#roll-hd:hover::before {
 
 .sheet.journal-entry .pages-list .page-heading .page-number {
     color: #5d180d;
+}
+
+div#camera-views {
+    margin: 0px 0px 18px 12px;
 }
 
 /*

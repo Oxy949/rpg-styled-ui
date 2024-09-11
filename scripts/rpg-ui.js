@@ -56,17 +56,6 @@ Hooks.on('init', () => {
 		}
 	});
 
-	if (!game.settings.get('rpg-styled-ui', 'compactModeToggle')) {
-		if (!game.settings.get('rpg-styled-ui', 'standardLogoToggle')) {
-			addClassByQuerySelector("hide", "img#logo")
-
-			let newLogo = document.createElement('div');
-			let uiLeft = document.getElementById('ui-left')
-			newLogo.classList.add("new-logo")
-			newLogo.innerText = "Foundry \nVTT"
-			uiLeft.prepend(newLogo)
-		}
-	}
 
 	if (!game.settings.get('rpg-styled-ui', 'disableAllStyles')) {
 		rpgUIAddMainCss()
@@ -76,6 +65,7 @@ Hooks.on('init', () => {
 	if (game.settings.get('rpg-styled-ui', 'minimalUICompatibility')) {
 		addClassByQuerySelector('minimal-ui-mode', 'body.vtt')
 	}
+
 });
 
 // Retreat class of Monk's Little Details
@@ -126,3 +116,16 @@ function addCompatibilityCss() {
 	mainCss.setAttribute("media", "all")
 	head.insertBefore(mainCss, head.lastChild);
 }
+
+function adjustControls() {
+	const uiTopHeight = $('#ui-top').outerHeight();
+	const statusBar = $('#controls');
+	statusBar.css('margin-top', `${uiTopHeight}px`);
+
+}
+
+//Someone could help me how to do this with Hooks for first load
+$(document).ready(() => {
+	setTimeout(adjustControls, 1000);
+  });
+$(window).on('resize', adjustControls);

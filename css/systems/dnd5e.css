@@ -514,8 +514,6 @@
     border-radius: 10px;
 }
 .dice-result .dice-tooltip {
-    background: var(--color-cool-5-50);
-    border-radius: 0 0 10px 10px;
 }
 .dice-result .dice-tooltip .dice .total .label {
     color: var(--pfui-main-color);
@@ -530,5 +528,219 @@
 .sheet.journal-entry.dnd5e2-journal .journal-entry-content {
     background: unset;
 }
+
+/* SHEET */
+/* 
+.dnd5e2.sheet.actor:not(.loot-sheet-npc),
+.dnd5e2.sheet.item {
+    background: rgba(6, 4, 3, 0.92);
+    border-image-source: url(../../ui/frames/input_border.webp);
+    border-image-slice: 5 20 20 20 fill;
+    border-image-repeat: repeat repeat;
+    border-image-width: auto;
+    border-image-outset: 1px 2px 2px 2px;
+    border-radius: 0;
+}
+
+.dnd5e2.sheet ::-webkit-scrollbar-thumb {
+    outline: none;
+    border-radius: 0px;
+    border: none;
+    background: #251f1d;
+}
+
+.dnd5e2.sheet ::-webkit-scrollbar-track {
+    background: #181413;
+}
+
+
+.window-app.dnd5e2.sheet.actor .window-header,
+.window-app.dnd5e2.sheet.item .window-header {
+    border: none;
+    color: var(--main-text-light-color);
+}
+
+.window-app.dnd5e2.sheet.actor:not(.loot-sheet-npc) .window-header::after,
+.window-app.dnd5e2.sheet.item .window-header::after {
+    position: absolute;
+    z-index: -1;
+    content: " ";
+    width: 100%;
+    height: 45px;
+    left: 0;
+    top: -9px;
+    background: url(../../ui/frames/header.webp);
+    background-size: 100% 45px;
+}
+
+.dnd5e2.sheet.actor:not(.loot-sheet-npc) .window-content,
+.dnd5e2.sheet.item .window-content {
+    background: none;
+    color: var(--main-text-light-color);
+}
+
+.dnd5e2.sheet .sheet-header {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+
+.dnd5e2.sheet .sheet-header img.profile {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+}
+
+.dnd5e.sheet .sheet-navigation {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+}
+
+.dnd5e2.sheet.actor .sheet-header .summary,
+.dnd5e2.sheet.item .sheet-header .summary {
+    border-image: url(../../ui/frames/brown_line.webp) 25 25 round;
+    border-bottom: 5px groove #eeede0;
+    border-top: 5px groove #eeede0;
+    height: 34px;
+}
+
+.dnd5e2.sheet.actor:not(.npc) .sheet-header .summary {
+    margin-top: 15px;
+}
+
+.dnd5e2.sheet .sheet-header .summary li {
+    margin: 1px 3px;
+    border: none;
+}
+
+.dnd5e2.item .sheet-header .summary li {
+    margin: -5px 3px;
+    border: none;
+}
+
+.dnd5e2.sheet.actor .sheet-header .header-exp {
+    height: 47px;
+}
+
+.dnd5e2.sheet.actor.character .sheet-header .xpbar .bar {
+    background: url("../../ui/other/xp_bar.webp") center right;
+    height: 10px;
+    border: none;
+    margin: 0;
+}
+
+.dnd5e2.sheet.actor .sheet-header .summary input, .dnd5e.sheet.actor .sheet-header .summary span {
+    font-family: 'Kurale', serif;
+    height: 22px;
+    line-height: 22px;
+}
+
+.dnd5e2.sheet.actor h4.box-title {
+    border-bottom: none;
+}
+
+.dnd5e2.sheet .sheet-header .header-details {
+    position: relative;
+}
+
+.dnd5e2.sheet.actor.character .sheet-header .xpbar {
+    width: 100%;
+    position: absolute;
+    background: #ffffff14;
+    top: 58px;
+    left: 0;
+}
+
+.dnd5e2.sheet.actor.character .inventory .item-controls .item-toggle,
+.dnd5e2.sheet.actor.character .spellbook .item-controls .item-toggle {
+    color: #4b4a44;
+}
+
+.dnd5e2.sheet.actor.character .inventory .item-controls .item-toggle.active,
+.dnd5e2.sheet.actor.character .spellbook .item-controls .item-toggle.active {
+    color: #b5b3a4;
+}
+
+.dnd5e2.sheet.actor .sheet-header .attributes {
+    padding-bottom: 10px;
+}
+
+.dnd5e2.sheet.actor .sheet-header .attributes .attribute {
+    border-right: none;
+}
+
+.dnd5e2.sheet.actor ul.attributes li.attribute .attribute-footer {
+    margin-top: 4px;
+}
+
+.dnd5e2.sheet .sheet-navigation .item {
+    border-bottom: none;
+}
+
+.dnd5e2.sheet .sheet-navigation .item {
+    position: relative;
+    border-bottom: none;
+}
+
+.dnd5e2.sheet .sheet-navigation .item.active {
+    border-bottom: none;
+}
+
+.dnd5e.sheet input[type="text"], .dnd5e input[type="number"], .dnd5e select {
+    color: #837360;
+    background: #ffffff14;
+}
+
+.dnd5e2.sheet input[type="text"]:hover,
+.dnd5e2.sheet input[type="number"]:hover,
+.dnd5e2.sheet input[type="text"]:focus,
+.dnd5e2.sheet input[type="number"]:focus {
+    box-shadow: none;
+    background: #ffffff25;
+}
+
+.dnd5e2.sheet.actor.character .sheet-header .attributes a.rest {
+    font-family: 'Kurale', serif;
+    font-weight: 600;
+    color: #837360;
+    border: none;
+    position: relative;
+    box-shadow: none;
+}
+
+.dnd5e2.sheet.actor.character .sheet-header .attributes a.rest::before {
+    position: absolute;
+    content: " ";
+    width: 120%;
+    height: 140%;
+    top: -15%;
+    left: -7%;
+    background: url(../../ui/buttons/btn-dnd5e-card.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+}
+
+.dnd5e2.sheet.actor.character .sheet-body .sidebar .favorites > ul .drop {
+    opacity: 1;
+}
+
+.dnd5e2.sheet.actor.character .sheet-header .attributes a.rest::after {
+    position: absolute;
+    content: " ";
+    width: 100%;
+    height: 130%;
+    top: -15%;
+    background: url(../../ui/buttons/btn-accept.webp);
+    background-size: 100% 100%;
+    z-index: -1;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.dnd5e2.sheet.actor.character .characteristics textarea {
+    border: 1px solid var(--border-color);
+    color: #837360;
+    background: #ffffff14;
+} 
+    */
 
 /* D&D v3 End */
