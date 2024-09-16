@@ -5,6 +5,7 @@
 @import "systems/dnd5e.css";
 @import "systems/blades-in-the-dark.css";
 @import "systems/shadowdark.css";
+@import "systems/worldbuilding.css";
 
 :root {
     --main-text-light-color: #98968a;
@@ -1208,7 +1209,7 @@ button#roll-hd:hover::before {
 }
 
 div#camera-views {
-    margin: 0px 0px 18px 12px;
+    background: none;
 }
 
 /*
