@@ -758,3 +758,7 @@
 .prosemirror.editing-source textarea {
     color: var(--main-text-light-color);
   }
+
+  .dice-result .dice-tooltip .tooltip-part {
+    border-bottom: none;
+  }
