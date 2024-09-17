@@ -75,7 +75,7 @@
 .worldbuilding.sheet.actor:not(.loot-sheet-npc),
 .worldbuilding.sheet.item {
     backdrop-filter: blur(10px);
-    background: rgba(6, 4, 3, 0.5);
+    background: rgba(6, 4, 3, 0.8);
     border-image-source: url(../../ui/frames/input_border.webp);
     border-image-slice: 5 20 20 20 fill;
     border-image-repeat: repeat repeat;
@@ -745,3 +745,16 @@
     */
 
 /* D&D v3 End */
+
+.prosemirror menu button {
+    color: brown;
+}
+
+.chat-message .message-header .message-sender {
+    color: var(--main-text-light-color);
+}
+
+
+.prosemirror.editing-source textarea {
+    color: var(--main-text-light-color);
+  }
