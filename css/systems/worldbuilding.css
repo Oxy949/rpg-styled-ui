@@ -762,3 +762,19 @@
   .dice-result .dice-tooltip .tooltip-part {
     border-bottom: none;
   }
+
+  .camera-view-width-control {
+    background: none;
+  }
+
+  div#camera-views .user-controls {
+    border-top: 2px solid rgba(0, 0, 0, 0);
+  }
+
+  div#camera-views #players {
+    border-top: 6px solid rgba(0, 0, 0, 0);
+  }
+
+  div#camera-views.camera-position-bottom .user-controls, div#camera-views.camera-position-top .user-controls {
+    border-left: 2px solid rgba(0, 0, 0, 0);
+  }
