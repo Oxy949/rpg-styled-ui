@@ -744,3 +744,7 @@
     */
 
 /* D&D v3 End */
+
+:is(.dnd5e2, .dnd5e2-journal) a:is(.content-link, .inline-roll){
+    color: black !important;
+}
