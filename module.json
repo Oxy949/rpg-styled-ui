@@ -37,6 +37,10 @@
       {
         "id": "worldbuilding",
         "type": "system"
+      },
+      {
+        "id": "CoC7",
+        "type": "system"
       }
     ]
   },
