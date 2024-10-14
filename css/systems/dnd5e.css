@@ -748,3 +748,23 @@
 :is(.dnd5e2, .dnd5e2-journal) a:is(.content-link, .inline-roll){
     color: black !important;
 }
+html body .rsr-title dnd5e-icon {
+    --icon-fill: #cfbda7;
+    fill: var(--pfui-main-color, #cfbda7) !important;
+}
+
+#chat-log > li > div > div > section.card-header.description {
+    margin-bottom: 0;
+}
+
+#chat-log > li > div > div.dnd5e2.chat-card.item-card > section.card-header.description.collapsible > section {
+    margin-bottom: 0;
+}
+
+.dice-result .dice-total.failure {
+    background-color: var(--color-cool-5-50);
+}
+
+.dice-result .dice-total.success {
+    background-color: var(--color-cool-5-50);
+}
