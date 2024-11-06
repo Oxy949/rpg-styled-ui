@@ -8,8 +8,8 @@
 @import "systems/worldbuilding.css";
 
 :root {
-    --main-text-light-color: #98968a;
-    --main-text-very-light-color: #d4d1c3;
+    --main-text-light-color: #d4d1c3;
+    --main-text-very-light-color: #ffffff;
     --border-color: #372d25;
     --text-shadow: 0px 1px 2px black;
     --header-bg-color: #7e152375;
@@ -204,8 +204,11 @@ body.compact-mode #logo {
 }
 
 #chat-form textarea {
-    color: #837360;
-    background: #ffffff14;
+    color: var(--main-text-light-color);
+    box-shadow: rgba(97, 24, 14, 0.219) inset #3f342b;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #000;
+    box-shadow: 0 0 6px inset #3f342b;
 }
 
 #chat-form textarea:focus {
@@ -213,7 +216,7 @@ body.compact-mode #logo {
 }
 
 #chat-controls {
-    color: #837360;
+    color: var(--main-text-light-color);
     margin: 0 6px 10px
 }
 
@@ -229,12 +232,12 @@ body.compact-mode #logo {
 }
 
 #chat-controls .roll-type-select {
-    background: rgb(131 115 96);
+    /*background: rgb(131 115 96);*/
 }
 
 #chat-log .message {
     position: relative;
-    color: #837360;
+    color: var(--main-text-light-color);
     border: none !important;
     background: none !important;
     padding: 10px 20px 15px 20px;
@@ -341,7 +344,7 @@ body.compact-mode #logo {
     background: none;
     box-shadow: none;
     border: none;
-    color: #837360;
+    color: var(--main-text-light-color);
 }
 
 #controls ol .scene-control.active,
@@ -404,7 +407,7 @@ body.compact-mode #logo {
 /*    border: none;*/
 /*    box-shadow: none;*/
 /*    background: none;*/
-/*    color: #837360;*/
+/*    color: var(--main-text-light-color);*/
 /*    padding: 5px;*/
 /*}*/
 
@@ -561,7 +564,7 @@ body.compact-mode #logo {
     top: initial;
     bottom: 2px;
     z-index: 3;
-    color: #837360;
+    color: var(--main-text-light-color);
     background: none;
 }
 
@@ -575,7 +578,7 @@ body.compact-mode #logo {
 }
 
 #hotbar .bar-controls {
-    color: #837360;
+    color: var(--main-text-light-color);
     background: none;
     border: none;
     box-shadow: none;
@@ -596,7 +599,7 @@ body.compact-mode #logo {
 
 .window-app.dialog .window-content,
 .window-app.folder-edit .window-content {
-    color: #8f8a80;
+    color: var(--main-text-light-color);
     background: none;
 }
 
@@ -623,7 +626,7 @@ body.compact-mode #logo {
 .folder-edit button {
     font-family: 'Kurale', serif;
     font-weight: 600;
-    color: #837360;
+    color: var(--main-text-light-color);
     border: none !important;
     position: relative;
     box-shadow: none;
@@ -1066,15 +1069,6 @@ button#roll-hd:hover::before {
 .journal-sheet.image-popout .window-content {
     margin-top: 30px;
     background: none;
-}
-
-.journal-sheet a.entity-link,
-.journal-sheet a.inline-roll {
-    color: #98968a;
-    background: #40130c;
-    padding: 0px 3px;
-    border: 2px solid #671911;
-    border-radius: 6px;
 }
 
 .journal-sheet.minimized {
